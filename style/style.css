@@ -230,3 +230,33 @@ h2 {
 .btn-comprar:hover {
     background-color: var(--color-rojo-hover);
 }
+
+
+/* zona admin */
+
+#loginForm {
+    width: 280px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#loginForm input {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#loginForm button {
+    padding: 8px;
+    margin-top: 10px;
+    background-color: var(--color-rojo);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#mensaje {
+    text-align: center;
+}
