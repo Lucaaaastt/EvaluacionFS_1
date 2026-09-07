@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="/admin/js/is_admin.js"></script>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>TIENDA PETE</h1>    
+            <img src="https://lol-tracker.com/v2/logo/loltracker-square-logo.png" alt="LogoTienda" class="logo">
+        </div>
+
+        <nav class="header-nav">
+            <a href="#">Sobre nosotros</a>
+            <a href="#" id="biblioteca" class="oculto">Biblioteca</a>
+        </nav>
+
+        <div class="cuenta-invitado">
+            <a href="#" id="btn-login">Iniciar Sesion</a>
+            <a href="#" id="btn-registro">Registrarse</a>
+        </div>
+
+        <div id="cuenta-usuario" class="oculto">
+            <span id="nombre">HOLA PEPE</span>
+            <a href="#" id="btn-salir">Cerrar Sesion</a>
+        </div>
+    </header>
+
+    <h1>Inicio sesion admin</h1>
+
+    <form id="loginForm">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required>
+
+        <button type="submit">Iniciar sesión</button>
+    </form>
+
+    <p id="mensaje"></p>
+
+    <script src="/admin/js/script.js"></script>
+</body>
+</html>

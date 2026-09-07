@@ -1,12 +1,13 @@
 /*QUE HACER ROOT? root mas que nada es como decir 'clase global' cualquier parte del css puede llamarla*/
 
 :root {
-  --color-fondo: #121212;
-  --color-fondo-header: #1c1c1c;
-  --color-rojo: #b83b3b;
-  --color-rojo-hover: #d14f4f;
-  --color-texto: #e8e8e8;
-  --color-texto-secundario: #9a9a9a;
+    --color-fondo: #121212;
+    --color-fondo-header: #1c1c1c;
+    --color-rojo: #b83b3b;
+    --color-rojo-hover: #d14f4f;
+    --color-texto: #e8e8e8;
+    --color-texto-secundario: #9a9a9a;
+    --color-verde-boton: #3b9b5f;
 }
 
 body {
@@ -282,3 +283,139 @@ h2 {
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------*/
+
+/* zona admin */
+
+#loginForm {
+    width: 280px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#loginForm input {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#loginForm button {
+    padding: 8px;
+    margin-top: 10px;
+    background-color: var(--color-rojo);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#mensaje {
+    text-align: center;
+}
+
+.stock-producto {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+width: 100%;
+}
+
+.id-producto {
+margin: 0;
+color: var(--color-texto);
+font-size: 14px;
+font-weight: bold;
+}
+
+.btn-stock {
+width: 32px;
+height: 32px;
+border: none;
+border-radius: 4px;
+background-color: var(--color-rojo);
+color: var(--color-texto);
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.btn-stock:hover {
+background-color: var(--color-rojo-hover);
+}
+
+.btn-guardar {
+width: 100%;
+padding: 8px 0;
+margin-top: 4px;
+background-color: var(--color-verde-boton);
+color: var(--color-texto);
+border: none;
+border-radius: 4px;
+font-size: 13px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.btn-guardar {
+background-color: #4caf70;
+}
+
+.formulario-producto {
+width: 400px;
+margin: 40px auto;
+padding: 24px 32px;
+background-color: var(--color-fondo-header);
+border: 1px solid #2d2d2d;
+border-radius: 8px;
+}
+
+.formulario-producto h2 {
+margin: 0 0 20px;
+padding: 0;
+}
+
+#formProducto {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+#formProducto label {
+color: var(--color-texto-secundario);
+font-size: 14px;
+}
+
+#formProducto input,
+#formProducto select,
+#formProducto textarea {
+padding: 8px;
+box-sizing: border-box;
+background-color: var(--color-fondo);
+color: var(--color-texto);
+border: 1px solid #2d2d2d;
+border-radius: 4px;
+}
+
+#formProducto input:focus,
+#formProducto select:focus,
+#formProducto textarea:focus {
+outline: none;
+border-color: var(--color-rojo);
+}
+
+#formProducto .btn-guardar {
+padding: 8px;
+margin-top: 10px;
+background-color: var(--color-verde-boton);
+color: var(--color-texto);
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+#formProducto .btn-guardar:hover {
+background-color: #4caf70;
+}
