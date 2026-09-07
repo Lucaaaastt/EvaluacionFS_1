@@ -139,49 +139,116 @@ header {
 }
 /*FIN POP UP REGISTRO*/
 
-/* CATALOGO */
-h2 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding: 20px 0;
+/* Título de la sección */
+.catalogo h2 {
+  text-align: center;
+  font-size: 22px;
+  color: var(--color-texto);
+  margin: 20px 0;
   font-weight: 600;
+}
+
+/* NOVEDAD) */
+.NOVEDADES {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .novedad {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding: 20px 0;
+  flex-direction: row;
+  background-color: var(--color-fondo-header);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2d2d2d;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .novedad_img {
-  width: 600px;
-  background-color: var(--color-fondo-header);
-  border: 1px solid #2d2d2d;
-  border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  flex: 1.2;
+  min-width: 0;
+}
+
+.novedad_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lado Derecho: Información */
+.novedad_info {
+  flex: 1;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-#texto {
-  display: inline-block;
-  vertical-align: top;
+.tag-destacado {
+  color: var(--color-rojo);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
+.novedad_info h3 {
+  font-size: 24px;
+  color: var(--color-texto);
+  margin: 0;
+}
+
+.novedad_info p {
+  color: var(--color-texto-secundario);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.novedad_compra {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.novedad_compra .precioJuego {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-texto);
+}
+
+/* Botón compacto solo para la novedad */
+.novedad_compra .btn-comprar {
+  width: auto;
+  padding: 10px 24px;
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.novedad_compra .btn-comprar:hover {
+  background-color: var(--color-rojo-hover);
+}
+
+
+/* --- GRILLA DE CALUGAS (JUEGOS SECUNDARIOS) --- */
 .calugas_ajustadas {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
-  padding: 20px 0;
+  padding: 20px 16px;
 }
 
 .caluga {
@@ -192,10 +259,8 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  overflow: hidden; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .caluga:hover {
@@ -205,15 +270,21 @@ h2 {
 
 .contenedor-img {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   background-color: #151515;
 }
 
 .imagen_aju {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.caluga:hover .imagen_aju {
+  transform: scale(1.05);
 }
 
 .info-producto {
@@ -240,8 +311,9 @@ h2 {
   font-weight: 600;
 }
 
-.btn-comprar {
-  display: inline-block;
+/* Botón que ocupa todo el ancho solo dentro de las calugas */
+.caluga .btn-comprar {
+  display: block;
   width: 100%;
   padding: 8px 0;
   margin-top: auto;
@@ -251,13 +323,100 @@ h2 {
   font-size: 13px;
   font-weight: bold;
   border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
   transition: background-color 0.2s ease;
 }
 
-.btn-comprar:hover {
+.caluga .btn-comprar:hover {
   background-color: var(--color-rojo-hover);
 }
 
+/* POP-UP COMPRA CENTRADO EN PANTALLA */
+#pop-compra {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  
+  background-color: #1e1e1e; 
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); 
+  z-index: 1000;
+  text-align: center;
+  min-width: 300px;
+}
+
+/* POP-UP DEL CARRITO */
+#pop-carrito {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  text-align: center;
+  min-width: 320px;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#lista-carrito li {
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* BOTÓN FLOTANTE DEL CARRITO */
+.btn-flotante-carrito {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #e50914; /* Puedes cambiar este color por el de tu paleta */
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Asegura que quede siempre sobre las imágenes */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-flotante-carrito:hover {
+  transform: scale(1.08);
+  background-color: #b20710;
+}
+
+/* Regla indispensable para esconder los pop-ups */
+.oculto {
+  display: none !important;
+}
+
+
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .novedad {
+    flex-direction: column;
+  }
+  .novedad_info {
+    padding: 20px;
+  }
+}
 /* ---------------------------------------------SOBRE NOSOTROS--------------------------------------------------------------*/
 
 #container-noticias .column {
