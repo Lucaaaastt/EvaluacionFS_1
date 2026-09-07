@@ -1,7 +1,8 @@
-Que pasa familia les comento cortito pensandolo bien me mande mucho la vola con la pagina por ende
-quise simplificarla altke(mala mia)agregue un header basico para que tengamos alguna idea adonde vamos
-cabe aclarar que el css me ayudo la ia porque la vdd no le pego mucho al diseño eso 
-mañana(jueves) le voy a preguntar al profe que tal 
+--EVALUACION FULLSTACK II--
 
+Tienda JDR es la competencia directa Steam , con el proposito de no solo proveer licencias de juegos si no que sean propiedad del usuario.
 
-les deje igual bien comentado lo que hice 
+Se utilizo Html para la estructura e etiquetado ,Css para diseño tipografia y posicionamiento finalmente se utiliza Javascript pra logica de funcionamiento.
+
+A su vez se utilizo el framework "Bulma" para algunas secciones de la pagina
+

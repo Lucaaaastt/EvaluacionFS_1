@@ -1,232 +1,284 @@
 /*QUE HACER ROOT? root mas que nada es como decir 'clase global' cualquier parte del css puede llamarla*/
 
 :root {
-    --color-fondo: #121212;
-    --color-fondo-header: #1c1c1c;
-    --color-rojo: #b83b3b;
-    --color-rojo-hover: #d14f4f;
-    --color-texto: #e8e8e8;
-    --color-texto-secundario: #9a9a9a;
+  --color-fondo: #121212;
+  --color-fondo-header: #1c1c1c;
+  --color-rojo: #b83b3b;
+  --color-rojo-hover: #d14f4f;
+  --color-texto: #e8e8e8;
+  --color-texto-secundario: #9a9a9a;
 }
 
 body {
-    margin: 0;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, sans-serif;
 }
 
 /*EMPIEZA EL HEADER &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-fondo-header);
-    padding: 12px 32px;
-    border-bottom: 2px solid var(--color-rojo);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-fondo-header);
+  padding: 12px 32px;
+  border-bottom: 2px solid var(--color-rojo);
 }
 
 .titulo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .titulo h1 {
-    font-size: 20px;
-    margin: 0;
-    color: var(--color-texto);
+  font-size: 20px;
+  margin: 0;
+  color: var(--color-texto);
+  order: 1;
 }
 
 .logo {
-    height: 36px;
-    width: 36px;
-    border-radius: 4px;
+  height: 36px;
+  width: 36px;
+  border-radius: 4px;
 }
 
 .header-nav {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
+  color: var(--color-texto-secundario);
+  margin-right: auto;
+  margin-left: 48px;
+  order: 2;
 }
-
 /* header "a" hacer referencia a todos los links que esten en el header en el apartado de navegacion lo que vendria siendo el medio */
 .header-nav a {
-    color: var(--color-texto-secundario);
-    text-decoration: none;
-    font-size: 14px;
+  color: var(--color-texto-secundario);
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .cuenta-invitado,
 #cuenta-usuario {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  order: 3;
 }
 
 .cuenta-invitado a,
 #cuenta-usuario a {
-    text-decoration: none;
-    font-size: 14px;
-    padding: 6px 14px;
-    border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 4px;
 }
 
 #btn-login {
-    background-color: var(--color-rojo);
-    color: var(--color-texto);
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
 }
 
 #btn-registro {
-    background-color: var(--color-rojo);
-    color: var(--color-texto);
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
 }
 
 #btn-registro:hover {
-    background-color: var(--color-rojo-hover);
+  background-color: var(--color-rojo-hover);
 }
 
 #nombre {
-    color: var(--color-texto-secundario);
-    font-size: 14px;
+  color: var(--color-texto-secundario);
+  font-size: 14px;
 }
 
 .oculto {
-    display: none;
+  display: none;
+}
+
+.btn-SobreNosotros {
+  background-color: var(--color-rojo);
+  color: var(--color-texto) !important;
+  padding: 6px 14px;
+  border-radius: 4px;
 }
 
 /*SE ACABO EL HEADER &&&&&&&&&&&&&&&&&&&&&& */
 
 /*POP UP REGISTRO*/
-#pop-registro {
-    background-color: var(--color-fondo-header);
-    border: 1px solid var(--color-rojo);
-    border-radius: 8px;
-    padding: 24px 32px;
-    width: 280px;
-    margin: 24px auto;
-    position: relative;
+.titulo-popup {
+  text-align: center;
+  margin: 0 0 16px 0;
+  color: var(--color-texto);
+}
+
+#pop-registro,
+#pop-iniciarSesion {
+  background-color: var(--color-fondo-header);
+  border: 1px solid var(--color-rojo);
+  border-radius: 8px;
+  padding: 24px 32px;
+  width: 280px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
 .cerrar-simple {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    cursor: pointer;
-    color: var(--color-texto-secundario);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  color: var(--color-texto-secundario);
 }
 /*FIN POP UP REGISTRO*/
 
 /* CATALOGO */
 h2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 20px 0;
-    font-weight: 600;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 20px 0;
+  font-weight: 600;
 }
 
 .novedad {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 20px 0;
 }
 
 .novedad_img {
-    width: 600px;
-    background-color: var(--color-fondo-header);
-    border: 1px solid #2d2d2d;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 600px;
+  background-color: var(--color-fondo-header);
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-#texto{
+#texto {
   display: inline-block;
   vertical-align: top;
 }
 
 .calugas_ajustadas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 20px 0;
 }
 
 .caluga {
-    width: 240px;
-    background-color: var(--color-fondo-header);
-    border: 1px solid #2d2d2d;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 240px;
+  background-color: var(--color-fondo-header);
+  border: 1px solid #2d2d2d;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .caluga:hover {
-    transform: translateY(-4px);
-    box-shadow: rgba(184, 59, 59, 0.2) 0px 8px 20px;
+  transform: translateY(-4px);
+  box-shadow: rgba(184, 59, 59, 0.2) 0px 8px 20px;
 }
 
 .contenedor-img {
-    width: 100%;
-    height: 180px;
-    background-color: #151515;
+  width: 100%;
+  height: 180px;
+  background-color: #151515;
 }
 
 .imagen_aju {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .info-producto {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    text-align: center;
-    flex-grow: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .tituloJuego {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-    color: var(--color-texto);
-    line-height: 1.2;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--color-texto);
+  line-height: 1.2;
 }
 
 .precioJuego {
-    font-size: 15px;
-    color: var(--color-texto-secundario);
-    font-weight: 600;
+  font-size: 15px;
+  color: var(--color-texto-secundario);
+  font-weight: 600;
 }
 
 .btn-comprar {
-    display: inline-block;
-    width: 100%;
-    padding: 8px 0;
-    margin-top: auto;
-    background-color: var(--color-rojo);
-    color: var(--color-texto);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+  display: inline-block;
+  width: 100%;
+  padding: 8px 0;
+  margin-top: auto;
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 .btn-comprar:hover {
-    background-color: var(--color-rojo-hover);
+  background-color: var(--color-rojo-hover);
 }
+
+/* ---------------------------------------------SOBRE NOSOTROS--------------------------------------------------------------*/
+
+#container-noticias .column {
+  text-align: center;
+}
+
+#container-noticias img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid var(--color-rojo);
+}
+
+#Descripcion,
+#Noticias {
+    text-align: left;
+}
+
+.h3Noticias{
+    text-align: left;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------*/

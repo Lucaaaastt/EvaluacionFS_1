@@ -1,118 +1,194 @@
-<!DOCTYPE html>
-<html lang='es'>
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tienda Pete</title>
-    <link rel='stylesheet' href='style/style.css'>
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
     <header>
-        <!-- HEADER $$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
-        <div class="titulo">
-            <h1>TIENDA PETE</h1>    
-            <img src="https://lol-tracker.com/v2/logo/loltracker-square-logo.png" alt="LogoTienda" class="logo">
-        </div>
+      <!-- HEADER $$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+      <div class="titulo">
+        <h1>TIENDA JDR</h1>
+        <img
+          src="https://lol-tracker.com/v2/logo/loltracker-square-logo.png"
+          alt="LogoTienda"
+          class="logo"
+        />
+      </div>
 
-        <nav class="header-nav">
-            <a href="#">Sobre nosotros</a>
-            <a href="#" id="biblioteca" class="oculto">Biblioteca</a>
-        </nav>
+      <nav class="header-nav">
+        <a href="SobreNosotros.html" class="btn-SobreNosotros"
+          >Sobre nosotros</a
+        >
+      </nav>
 
-        <div class="cuenta-invitado">
-            <a href="#" id="btn-login">Iniciar Sesion</a>
-            <a href="#" id="btn-registro">Registrarse</a>
-        </div>
+      <div class="cuenta-invitado">
+        <a href="#" id="btn-login">Iniciar Sesion</a>
+        <a href="#" id="btn-registro">Registrarse</a>
+      </div>
 
-        <div id="cuenta-usuario" class="oculto">
-            <span id="nombre">HOLA PEPE</span>
-            <a href="#" id="btn-salir">Cerrar Sesion</a>
-        </div>
-        <!-- FIN HEADER $$$$$$$$$$$$$$$$$$ -->
+      <div id="cuenta-usuario" class="oculto">
+        <span id="nombre">HOLA PEPE</span>
+        <a href="#" id="btn-salir">Cerrar Sesion</a>
+      </div>
+      <!-- FIN HEADER $$$$$$$$$$$$$$$$$$ -->
     </header>
-<!--POP UP REGISTRO $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
-<div id="pop-registro" class="oculto">
-    <span id="cerrar-registro" class="cerrar-simple">&times;</span>
-    <h2>CREAR CUENTA</h2>
-    <form id="form-registro">
+    <!--POP UP REGISTRO $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+    <div id="pop-registro" class="oculto">
+      <h3 class="titulo-popup">CREAR CUENTA</h3>
+      <span id="cerrar-registro" class="cerrar-simple">&times;</span>
+      <form id="form-registro">
         <label for="reg-usuario">Usuario</label>
-        <input type="text" id="reg-usuario" required>
+        <input type="text" id="reg-usuario" required />
 
         <label for="reg-correo">Correo</label>
-        <input type="email" id="reg-correo" required>
+        <input type="email" id="reg-correo" required />
 
         <label for="reg-contrasena">Contraseña</label>
-        <input type="password" id="reg-contrasena" required>
+        <input type="password" id="reg-contrasena" required />
 
         <button type="submit">Registrarse</button>
-    </form>
-</div>
-<!--FIN POP UP REGISTRO $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
-<section class="catalogo">
-    <h2>CATALOGO</h2>
-    <div class="NOVEDADES">
+      </form>
+    </div>
+    <!--FIN POP UP REGISTRO $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
+    <!-- POP UP INICIAR SESION-->
+    <div id="pop-iniciarSesion" class="oculto">
+      <h3 class="titulo-popup">INICIAR SESIÓN</h3>
+      <span id="cerrar-login" class="cerrar-simple">&times;</span>
+      <form id="form-iniciarSesion">
+        <label for="NombreUsuario">Nombre de usuario</label><br />
+        <input type="text" id="NombreUsuario" required /><br />
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" id="Contraseña" required /><br />
+        <button type="submit">Iniciar sesión</button>
+      </form>
+    </div>
+    <!-- FIN POP UP INICIAR SESION-->
+    <section class="catalogo">
+      <h2>CATALOGO</h2>
+      <div class="NOVEDADES">
         <article class="novedad">
-            <div class="novedad_img">
-                <img src="https://placehold.net/600x600.png">
-            </div>
-            <div>
-                <p id="texto">DESCRIPCION DE JUEGO</p>
-            </div>
+          <div class="novedad_img">
+            <img src="https://placehold.net/600x600.png" />
+          </div>
+          <div>
+            <p id="texto">DESCRIPCION DE JUEGO</p>
+          </div>
         </article>
-    </div>
-    <div class="calugas_ajustadas">
+      </div>
+      <div class="calugas_ajustadas">
         <article class="caluga">
-            <div class="contenedor-img">
-                <img src="https://placehold.net/400x400.png" alt="RED DEAD REDEMPTION II" class="imagen_aju">
-            </div>
-            <div class="info-producto">
-                <h3 class="tituloJuego">RED DEAD REDEMPTION II</h3>
-                <span class="precioJuego">$64.990</span>
-                <a href="#" class="btn-comprar">COMPRAR</a>
-            </div>
-        </article>
-        <article class="caluga">
-            <div class="contenedor-img">
-                <img src="https://placehold.net/400x400.png" alt="RED DEAD REDEMPTION II" class="imagen_aju">
-            </div>
-            <div class="info-producto">
-                <h3 class="tituloJuego">EJEMPLO2</h3>
-                <span class="precioJuego">$64.990</span>
-                <a href="#" class="btn-comprar">COMPRAR</a>
-            </div>
+          <div class="contenedor-img">
+            <img
+              src="https://placehold.net/400x400.png"
+              alt="RED DEAD REDEMPTION II"
+              class="imagen_aju"
+            />
+          </div>
+          <div class="info-producto">
+            <h3 class="tituloJuego">RED DEAD REDEMPTION II</h3>
+            <span class="precioJuego">$64.990</span>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
         </article>
         <article class="caluga">
-            <div class="contenedor-img">
-                <img src="https://placehold.net/400x400.png" alt="RED DEAD REDEMPTION II" class="imagen_aju">
-            </div>
-            <div class="info-producto">
-                <h3 class="tituloJuego">EJEMPLO3</h3>
-                <span class="precioJuego">$64.990</span>
-                <a href="#" class="btn-comprar">COMPRAR</a>
-            </div>
+          <div class="contenedor-img">
+            <img
+              src="https://placehold.net/400x400.png"
+              alt="RED DEAD REDEMPTION II"
+              class="imagen_aju"
+            />
+          </div>
+          <div class="info-producto">
+            <h3 class="tituloJuego">EJEMPLO2</h3>
+            <span class="precioJuego">$64.990</span>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
         </article>
         <article class="caluga">
-            <div class="contenedor-img">
-                <img src="https://placehold.net/400x400.png" alt="RED DEAD REDEMPTION II" class="imagen_aju">
-            </div>
-            <div class="info-producto">
-                <h3 class="tituloJuego">EJEMPLO4</h3>
-                <span class="precioJuego">$64.990</span>
-                <a href="#" class="btn-comprar">COMPRAR</a>
-            </div>
+          <div class="contenedor-img">
+            <img
+              src="https://placehold.net/400x400.png"
+              alt="RED DEAD REDEMPTION II"
+              class="imagen_aju"
+            />
+          </div>
+          <div class="info-producto">
+            <h3 class="tituloJuego">EJEMPLO3</h3>
+            <span class="precioJuego">$64.990</span>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
         </article>
         <article class="caluga">
-            <div class="contenedor-img">
-                <img src="https://placehold.net/400x400.png" alt="RED DEAD REDEMPTION II" class="imagen_aju">
-            </div>
-            <div class="info-producto">
-                <h3 class="tituloJuego">EJEMPLO4</h3>
-                <span class="precioJuego">$64.990</span>
-                <a href="#" class="btn-comprar">COMPRAR</a>
-            </div>
+          <div class="contenedor-img">
+            <img
+              src="https://placehold.net/400x400.png"
+              alt="RED DEAD REDEMPTION II"
+              class="imagen_aju"
+            />
+          </div>
+          <div class="info-producto">
+            <h3 class="tituloJuego">EJEMPLO4</h3>
+            <span class="precioJuego">$64.990</span>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
         </article>
-    </div>
-</section>
- <script src="js/pagina.js"></script>   
-</body>
+        <article class="caluga">
+          <div class="contenedor-img">
+            <img
+              src="https://placehold.net/400x400.png"
+              alt="RED DEAD REDEMPTION II"
+              class="imagen_aju"
+            />
+          </div>
+          <div class="info-producto">
+            <h3 class="tituloJuego">EJEMPLO4</h3>
+            <span class="precioJuego">$64.990</span>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!--FOOTER $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+    <footer>
+      <p>&copy; 2026 Tienda Pete. Todos los derechos reservados.</p>
+      <div class="contenedor-contacto">
+        <h3>CONTACTO</h3>
+        <ul class="datosDireccion">
+          <li>Dirección: Peñaflor Cerro Papa 324</li>
+          <li>Teléfono: +56 9 1234 5678</li>
+          <li>DUOC UC</li>
+        </ul>
+      </div>
+      <div class="contenedor-Redes">
+        <a href="https://github.com/Lucaaaastt/EvaluacionFS_1" target="_blank">
+          <img
+            src="https://cdn.simpleicons.org/github/ffffff"
+            alt="Repositorio en GitHub"
+            width="32"
+          />
+        </a>
+        <a href="https://www.youtube.com/shorts/ZnRJdb301es" target="_blank">
+          <img
+            src="https://cdn.simpleicons.org/youtube/ffffff"
+            alt="YouTube"
+            width="32"
+          />
+        </a>
+      </div>
+      <div class="contenedor-info">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque
+          est incidunt, officiis pariatur esse nostrum eum provident debitis
+          enim minima sunt voluptatibus autem, distinctio, nobis ipsa nisi
+          voluptatem quisquam!
+        </p>
+      </div>
+    </footer>
+    <!-- FIN FOOTER $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <script src="js/pagina.js"></script>
+  </body>
 </html>
