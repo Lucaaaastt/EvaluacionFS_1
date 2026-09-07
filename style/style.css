@@ -7,6 +7,7 @@
     --color-rojo-hover: #d14f4f;
     --color-texto: #e8e8e8;
     --color-texto-secundario: #9a9a9a;
+    --color-verde-boton: #3b9b5f;
 }
 
 body {
@@ -259,4 +260,54 @@ h2 {
 
 #mensaje {
     text-align: center;
+}
+
+.stock-producto {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+width: 100%;
+}
+
+.id-producto {
+margin: 0;
+color: var(--color-texto);
+font-size: 14px;
+font-weight: bold;
+}
+
+.btn-stock {
+width: 32px;
+height: 32px;
+border: none;
+border-radius: 4px;
+background-color: var(--color-rojo);
+color: var(--color-texto);
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.btn-stock:hover {
+background-color: var(--color-rojo-hover);
+}
+
+.btn-guardar {
+width: 100%;
+padding: 8px 0;
+margin-top: 4px;
+background-color: var(--color-verde-boton);
+color: var(--color-texto);
+border: none;
+border-radius: 4px;
+font-size: 13px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.btn-guardar {
+background-color: #4caf70;
 }
