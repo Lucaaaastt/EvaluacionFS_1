@@ -1,4 +1,5 @@
 const catalogo = document.getElementById("catalogo");
+let url_imagenes = ["r2", "aoe2", "eldenring", "got", "witcher3"]
 
 for (let i = 1; i <= 5; i++) {
   const articulo = document.createElement("article");
@@ -7,7 +8,7 @@ for (let i = 1; i <= 5; i++) {
   articulo.innerHTML = `
     <div class="contenedor-img">
         <img
-            src="https://placehold.net/400x400.png"
+            src="/images/${url_imagenes[i-1]}.webp"
             alt="Articulo ${i}"
             class="imagen_aju"
         />
