@@ -46,11 +46,9 @@ botonesComprar.forEach(boton => {
         const nombre = boton.getAttribute('data-nombre') || "Juego";
         const precio = parseInt(boton.getAttribute('data-precio')) || 0;
 
-        // Guardar en el arreglo y en localStorage
         carrito.push({ nombre, precio });
         localStorage.setItem('carrito', JSON.stringify(carrito));
 
-        // Actualizar vista del carrito y mostrar aviso flotante
         actualizarCarrito();
         if (mensajeCompra) mensajeCompra.textContent = `¡Agregaste "${nombre}" al carrito!`;
         if (popCompra) popCompra.classList.remove('oculto');

@@ -311,7 +311,7 @@ header {
   font-weight: 600;
 }
 
-/* Botón que ocupa todo el ancho solo dentro de las calugas */
+/* Botón para las calugas */
 .caluga .btn-comprar {
   display: block;
   width: 100%;
@@ -349,7 +349,7 @@ header {
   min-width: 300px;
 }
 
-/* POP-UP DEL CARRITO */
+/* POP-UP DEL CARRIO */
 #pop-carrito {
   position: fixed;
   top: 50%;
@@ -379,12 +379,12 @@ header {
   border-bottom: 1px solid #333;
 }
 
-/* BOTÓN FLOTANTE DEL CARRITO */
+/* BOTON FLOTANTE DEL CARRITO */
 .btn-flotante-carrito {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background-color: #e50914; /* Puedes cambiar este color por el de tu paleta */
+  background-color: #e50914;
   color: #ffffff;
   border: none;
   padding: 12px 20px;
@@ -393,7 +393,7 @@ header {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-  z-index: 999; /* Asegura que quede siempre sobre las imágenes */
+  z-index: 999;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
