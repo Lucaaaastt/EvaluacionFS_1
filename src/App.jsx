@@ -1,4 +1,5 @@
 import { Header } from './components/organisms/Header'
+import { Footer } from './components/organisms/Footer'
 import '../style/App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <p>Sección pendiente de migrar.</p>
         </section>
       </main>
+      <Footer />
     </>
   )
 }
