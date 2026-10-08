@@ -1,11 +1,20 @@
 import { NavLink } from '../atoms/NavLink';
 
-export function Navbar() {
+export function Navbar({ items = [] }) {
   return (
-    <nav className="nav-links" aria-label="Navegacion principal">
-      <NavLink href="#inicio">Inicio</NavLink>
-      <NavLink href="#catalogo">Catalogo</NavLink>
-      <NavLink href="#sobre-nosotros">Sobre nosotros</NavLink>
+    <nav className="nav-links" aria-label="Navegación principal">
+      {items.map((item) => (
+        <NavLink
+          key={item.id}
+          href={item.href}
+          icon={item.icon}
+          className={item.className}
+          target={item.target}
+          rel={item.rel}
+        >
+          {item.text}
+        </NavLink>
+      ))}
     </nav>
   );
 }

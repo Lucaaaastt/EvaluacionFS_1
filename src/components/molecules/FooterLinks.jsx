@@ -1,17 +1,13 @@
 import { NavLink } from '../atoms/NavLink';
 
-export function FooterLinks() {
+export function FooterLinks({ items = [] }) {
   return (
     <nav className="footer-links" aria-label="Enlaces del footer">
-      <NavLink href="#inicio">Inicio</NavLink>
-      <NavLink href="#sobre-nosotros">Sobre nosotros</NavLink>
-      <NavLink
-        href="https://github.com/Lucaaaastt/EvaluacionFS_1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </NavLink>
+      {items.map((item) => (
+        <NavLink key={item.id} href={item.href} target={item.target} rel={item.rel}>
+          {item.text}
+        </NavLink>
+      ))}
     </nav>
   );
 }

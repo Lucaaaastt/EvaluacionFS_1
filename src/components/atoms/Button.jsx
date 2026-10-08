@@ -14,7 +14,7 @@ export function Button({
       disabled={disabled} // Define el estado de deshabilitado nativo del botón HTML.
       className={className} // Aplica las clases CSS para dar estilo al botón.
     >
-      {children}          // Renderiza lo que pongas dentro de las etiquetas <Button>...</Button>.
+      {children}
     </button>
   );
 }
